@@ -3,14 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
-    <div id="game">
+    <section class="main_game">
       <h1>Welcome to the Rock and Scissors Game!</h1>
-      <h2>Press r, p or s</h2>
-      <h2 id="result">The winner is:</h2>
-    </div>
+      <img id="bio-photo" src="immage/rps.jpg" alt="rps game banner"
+        height="250"
+        width="350">
+      <div id="game">
+        <h2>Press <span>R, P</span> or <span>S</span></h2>
+        <h2 id="result">The winner is:</h2>
+      </div>
+    </section>
 
     <script type="text/javascript">
       let computerChoices = ["r", "p", "s"];

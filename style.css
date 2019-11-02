@@ -1,0 +1,17 @@
+/* body {
+    background-color: #c9d175;
+} */
+
+span {
+    font-weight: 900;
+    font-size: x-large;
+    font-family: "Savoye LET";
+    color: rgb(209, 101, 29);
+    font-weight: 700;
+}
+
+h1 {
+    color: rgb(212, 88, 6);
+    font-size: 25px;
+    font-weight: 400;
+}
