@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Rock Paper Scissors</title>
+  </head>
+
+  <body>
+    <div id="game">
+      <h1>Welcome to the Rock and Scissors Game!</h1>
+      <h2>Press r, p or s</h2>
+      <h2 id="result">The winner is:</h2>
+    </div>
+
+    <script type="text/javascript">
+      let computerChoices = ["r", "p", "s"];
+
+      const gameTable = createTable();
+
+      document.addEventListener("keyup", event => {
+        let userChoice = event.key;
+        gameLogic(userChoice);
+      });
+
+      function gameLogic(choice) {
+        let computerGuess =
+          computerChoices[Math.floor(Math.random() * computerChoices.length)];
+        let result = gameTable[choice][computerGuess];
+        console.log(
+          `User entered ${choice}, computer chose ${computerGuess}, who won? ${result}`
+        );
+        showMeResult(result);
+      }
+
+      function showMeResult(result) {
+        document.getElementById("result").innerHTML =
+          "The winner is: " + result;
+      }
+
+      function createTable() {
+        let table = {};
+        table["s"] = {};
+        table["s"]["s"] = "Draw";
+        table["s"]["r"] = "Machine";
+        table["s"]["p"] = "Human";
+        table["r"] = {};
+        table["r"]["s"] = "Human";
+        table["r"]["r"] = "Draw";
+        table["r"]["p"] = "Human";
+        table["p"] = {};
+        table["p"]["s"] = "Machine";
+        table["p"]["r"] = "Machine";
+        table["p"]["p"] = "Draw";
+        return table;
+      }
+    </script>
+  </body>
+</html>
