@@ -1,19 +1,22 @@
-/* body {
-    /* background-image: url("immage/2b87ce43e374d83b194fa4fe69745d9a.png");
+body {
+    text-align: center;
+    background-color: #56594A;
+}
+
+/* background-image: url("immage/2b87ce43e374d83b194fa4fe69745d9a.png");
     background-repeat: no-repeat;
     background-position: right top; 
 }*/
 
 span {
-    font-weight: 900;
-    font-size: x-large;
+    font-size: 30px;
     font-family: "Savoye LET";
-    color: rgb(209, 101, 29);
-    font-weight: 700;
+    color: rgb(233, 226, 14);
+    font-weight: 400;
 }
 
 h1 {
-    color: rgb(212, 88, 6);
+    color: #272844;
     font-size: 25px;
     font-weight: 400;
 }
@@ -32,4 +35,14 @@ img {
 
 .game {
     margin: 0 100px;
+}
+
+#show_result {
+    color: #272844;
+    font-family: "Savoye LET";
+    font-size: 25px;
+}
+
+#do_it {
+    color: #272844;
 }
