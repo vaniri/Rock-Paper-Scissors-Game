@@ -17,20 +17,20 @@
         width="350"
       />
       <div id="game">
-        <h2>Press <span>"r", "p"</span> or <span>"s"</span></h2>
-        <h2>The winner is:</h2>
+        <h2 id="do_it">Press <span>"r", "p"</span> or <span>"s"</span></h2>
+        <h2 id="show_result">The winner is:</h2>
         <h2 id="result"></h2>
       </div>
     </section>
 
     <script type="text/javascript">
-      let computerChoices = ["r", "p", "s"];
+      let possibleChoices = ["r", "p", "s"];
 
       const gameTable = createTable();
 
       document.addEventListener("keyup", event => {
         let userChoice = event.key;
-        if (userChoice !== "r" && userChoice !== "s" && userChoice !== "p") {
+        if (!possibleChoices.includes(userChoice)) {
           return;
         }
         gameLogic(userChoice);
@@ -38,7 +38,7 @@
 
       function gameLogic(choice) {
         let computerGuess =
-          computerChoices[Math.floor(Math.random() * computerChoices.length)];
+          possibleChoices[Math.floor(Math.random() * possibleChoices.length)];
         let result = gameTable[choice][computerGuess];
         console.log(
           `User entered ${choice}, computer chose ${computerGuess}, who won? ${result}`
