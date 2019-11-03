@@ -1,8 +1,11 @@
 /* body {
-    background-color: #c9d175;
-} */
+    /* background-image: url("immage/2b87ce43e374d83b194fa4fe69745d9a.png");
+    background-repeat: no-repeat;
+    background-position: right top; */
 
-span {
+}
+
+*/ span {
     font-weight: 900;
     font-size: x-large;
     font-family: "Savoye LET";
@@ -14,4 +17,20 @@ h1 {
     color: rgb(212, 88, 6);
     font-size: 25px;
     font-weight: 400;
+}
+
+/* #img_left {
+    float: left;
+}
+
+#img_right {
+    float: right;
+} */
+
+img {
+    margin: 0 30px;
+}
+
+.game {
+    margin: 0 100px;
 }

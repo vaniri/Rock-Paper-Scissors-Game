@@ -3,18 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <title>Rock Paper Scissors</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <section class="main_game">
-      <h1>Welcome to the Rock and Scissors Game!</h1>
-      <img id="bio-photo" src="immage/rps.jpg" alt="rps game banner"
+      <h1>Welcome to the Rock, Papper and Scissors Game!</h1>
+      <img
+        id="bio-photo"
+        src="immage/rps.jpg"
+        alt="rps game banner"
         height="250"
-        width="350">
+        width="350"
+      />
       <div id="game">
         <h2>Press <span>R, P</span> or <span>S</span></h2>
-        <h2 id="result">The winner is:</h2>
+        <h2>The winner is:</h2>
+        <h2 id="result"></h2>
       </div>
     </section>
 
@@ -25,6 +30,9 @@
 
       document.addEventListener("keyup", event => {
         let userChoice = event.key;
+        if (userChoice !== "r" && userChoice !== "s" && userChoice !== "p") {
+          return;
+        }
         gameLogic(userChoice);
       });
 
@@ -39,24 +47,28 @@
       }
 
       function showMeResult(result) {
-        document.getElementById("result").innerHTML =
-          "The winner is: " + result;
+        const labels = [
+          '<img src="immage/draw.jpg" width="100" height="100"/>',
+          '<img src="immage/human.png" width="100" height="100"/>',
+          '<img src="immage/computer.png" width="100" height="100"/>'
+        ];
+        document.getElementById("result").innerHTML = labels[result];
       }
 
       function createTable() {
         let table = {};
         table["s"] = {};
-        table["s"]["s"] = "Draw";
-        table["s"]["r"] = "Machine";
-        table["s"]["p"] = "Human";
+        table["s"]["s"] = "0";
+        table["s"]["r"] = "2";
+        table["s"]["p"] = "1";
         table["r"] = {};
-        table["r"]["s"] = "Human";
-        table["r"]["r"] = "Draw";
-        table["r"]["p"] = "Human";
+        table["r"]["s"] = "1";
+        table["r"]["r"] = "0";
+        table["r"]["p"] = "2";
         table["p"] = {};
-        table["p"]["s"] = "Machine";
-        table["p"]["r"] = "Machine";
-        table["p"]["p"] = "Draw";
+        table["p"]["s"] = "2";
+        table["p"]["r"] = "1";
+        table["p"]["p"] = "0";
         return table;
       }
     </script>
