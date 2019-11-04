@@ -18,7 +18,7 @@ span {
 h1 {
     color: #272844;
     font-size: 25px;
-    font-weight: 400;
+    font-weight: 200;
 }
 
 /* #img_left {
@@ -38,7 +38,8 @@ img {
 }
 
 #show_result {
-    color: #272844;
+    color: white;
+    font-weight: 200;
     font-family: "Savoye LET";
     font-size: 25px;
 }
