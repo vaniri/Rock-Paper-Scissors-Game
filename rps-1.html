@@ -7,6 +7,7 @@
   </head>
 
   <body>
+    <!-- Game interface section -->
     <section class="main_game">
       <h1>Welcome to the Rock, Papper and Scissors Game!</h1>
       <img
@@ -22,6 +23,8 @@
         <h2 id="result"></h2>
       </div>
     </section>
+
+    <!-- Javascript part-->
 
     <script type="text/javascript">
       let possibleChoices = ["r", "p", "s"];
@@ -56,17 +59,17 @@
       function createTable() {
         let table = {};
         table["s"] = {};
-        table["s"]["s"] = "0";
-        table["s"]["r"] = "2";
-        table["s"]["p"] = "1";
+        table["s"]["s"] = 0;
+        table["s"]["r"] = 2;
+        table["s"]["p"] = 1;
         table["r"] = {};
-        table["r"]["s"] = "1";
-        table["r"]["r"] = "0";
-        table["r"]["p"] = "2";
+        table["r"]["s"] = 1;
+        table["r"]["r"] = 0;
+        table["r"]["p"] = 2;
         table["p"] = {};
-        table["p"]["s"] = "2";
-        table["p"]["r"] = "1";
-        table["p"]["p"] = "0";
+        table["p"]["s"] = 2;
+        table["p"]["r"] = 1;
+        table["p"]["p"] = 0;
         return table;
       }
     </script>
