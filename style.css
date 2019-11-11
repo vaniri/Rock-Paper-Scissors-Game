@@ -10,7 +10,7 @@ body {
 
 span {
     font-size: 30px;
-    font-family: "Savoye LET";
+    font-family: "Lato", "Open Sans", "Helvetica Neue";
     color: rgb(233, 226, 14);
     font-weight: 400;
 }
@@ -39,8 +39,8 @@ img {
 
 #show_result {
     color: white;
-    font-weight: 200;
-    font-family: "Savoye LET";
+    font-weight: 400;
+    font-family: "Lato", "Open Sans", "Helvetica Neue";
     font-size: 25px;
 }
 
